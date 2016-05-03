@@ -1,12 +1,14 @@
 #include <iostream>
 #include <vector>
 #include <string.h>
+#include <bitset>
+int main()
+{
 using std::vector;
 using std::string;
 using std::cout;
 using std::endl;
-int main()
-{
+
 	vector<string> strvec(10,"hi!");
 	for(vector<string>::iterator iter = strvec.begin();
 		iter != strvec.end();
@@ -32,5 +34,14 @@ int main()
     strvec.push_back("the new element");
 	cout << strvec[10] << endl;
 	cout << strvec.size() << endl;
+	{
+		using std::bitset;
+		bitset<16> bitvec1(0xffff);
+		bitset<32> bitvec2(0xffff);
+		bitset<128> bitvec3(0xffff);
+		cout << bitvec1 << endl;
+		cout << bitvec2 << endl;
+		cout << bitvec3 << endl;
+	}
 	return 0;
 }
