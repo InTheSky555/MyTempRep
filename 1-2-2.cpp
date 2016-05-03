@@ -8,6 +8,13 @@ using std::endl;
 int main()
 {
 	vector<string> strvec(10,"hi!");
+	for(vector<string>::size_type ix = 0;
+		ix != strvec.size();
+		++ix
+	   )
+	{
+		strvec[ix] = "how are you \r\n ";	
+	}
 	std::cout << strvec[0] << strvec[1]
 			  << strvec[2] << strvec[3]	
 			  << strvec[4] << strvec[5]
