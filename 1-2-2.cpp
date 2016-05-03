@@ -15,6 +15,13 @@ int main()
 	{
 		*iter = "I am HuangWu \r\n";	
 	}
+	for(vector<string>::const_iterator c_iter = strvec.begin();
+	   	c_iter != strvec.end();
+		++ c_iter	   
+	   )
+	{
+		cout << *c_iter << endl;
+	}
 	std::cout << strvec[0] << strvec[1]
 			  << strvec[2] << strvec[3]	
 			  << strvec[4] << strvec[5]
